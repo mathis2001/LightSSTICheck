@@ -9,11 +9,11 @@ $ git clone https://github.com/mathis2001/LightSSTICheck
 
 ## Usage:
 ```bash
-$ cat urls.txt | python3 LightSSTICheck.py
+$ cat urls.txt | python3 LightSSTICheck.py [--get] [--post]
 
 or with an other tool like waybackurls
 
-$ waybackurls exemple.com | python3 LightSSTICheck.py 
+$ waybackurls exemple.com | python3 LightSSTICheck.py [--get] [--post]
 ```
 ## Screenshots
 
