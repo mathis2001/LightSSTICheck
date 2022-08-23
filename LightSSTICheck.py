@@ -18,8 +18,13 @@ def main():
 				for key, value in params.items():
 						params[key]=payload
 				url = '&'.join('{}={}'.format(key, value) for key, value in params.items())
-				rq = requests.get(url)
-				if '59.290000000000006' in rq.text:
+				if '--get' in sys.argv:
+					rq = requests.get(url)
+				if '--post' in sys.argv:
+					rq = requests.post(url)
+				else:
+					rq = requests.get(url)
+				if '59.29' in rq.text:
 					print(bcolors.FAIL+"[VULN] "+url+bcolors.RESET)
 					if payload == "<%= 7.7*7.7 %>":
 						print(bcolors.INFO+"[*] "+"Possible Template found: Mako, Ruby - ERB"+bcolors.RESET)
