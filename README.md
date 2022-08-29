@@ -1,6 +1,6 @@
 # LightSSTICheck.py
 
-LightSSTICheck is a tool designed to find easy SSTI vulnerabilities in a list of urls
+LightSSTICheck is a tool designed to find basic SSTI vulnerabilities in a list of urls
 
 ## Install:
 ```bash
